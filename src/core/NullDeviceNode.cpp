@@ -104,6 +104,12 @@ void NullDeviceNode::start()
     }
 }
 
+void NullDeviceNode::startAtAudioBus(AudioBus * src)
+{
+    m_lengthSeconds = src->channel(0)->length() / m_context->sampleRate();
+    start();
+}
+
 void NullDeviceNode::stop()
 {
     shouldExit = true;

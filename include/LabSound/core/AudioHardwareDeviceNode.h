@@ -59,6 +59,8 @@ public:
     virtual const AudioStreamConfig getInputConfig() const override;
 
     AudioSourceProvider * AudioHardwareInputProvider();
+
+    virtual  void startAtAudioBus(AudioBus * src) override;
 };
 
 }  // namespace lab

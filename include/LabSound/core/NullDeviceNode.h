@@ -62,6 +62,7 @@ public:
     virtual const SamplingInfo getSamplingInfo() const override final;
     virtual const AudioStreamConfig getOutputConfig() const override final;
     virtual const AudioStreamConfig getInputConfig() const override final;
+    virtual  void startAtAudioBus(AudioBus * src) override;
 };
 
 }  // namespace lab

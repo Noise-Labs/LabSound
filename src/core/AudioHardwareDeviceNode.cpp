@@ -105,6 +105,12 @@ void AudioHardwareDeviceNode::start()
     }
 }
 
+void AudioHardwareDeviceNode::startAtAudioBus(AudioBus * src)
+{
+    throw "Unsupportted it";
+}
+
+
 void AudioHardwareDeviceNode::backendReinitialize()
 {
     m_platformAudioDevice->backendReinitialize();

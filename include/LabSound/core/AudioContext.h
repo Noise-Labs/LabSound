@@ -160,6 +160,9 @@ public:
     void startOfflineRendering();
     std::function<void()> offlineRenderCompleteCallback;
 
+    void startOfflineRenderWithInput(std::shared_ptr<AudioBus>);
+
+
     // suspend the progression of time in the audio context, any queued samples will play
     void suspend();
 

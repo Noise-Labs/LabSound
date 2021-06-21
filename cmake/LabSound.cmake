@@ -97,7 +97,7 @@ add_library(LabSound STATIC
     ${ooura_src}
  )
 
-if (APPLE)
+if (IOS)
     set_target_properties(LabSound PROPERTIES
         FRAMEWORK TRUE
         FRAMEWORK_VERSION A

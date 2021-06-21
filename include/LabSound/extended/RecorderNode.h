@@ -19,14 +19,14 @@ class RecorderNode : public AudioNode
 
     bool m_recording{false};
 
-    std::vector<std::vector<float>> m_data;  // non-interleaved
+ // non-interleaved
     mutable std::recursive_mutex m_mutex;
 
     float m_sampleRate;
     static bool s_registered;
 
 public:
-
+    std::vector<std::vector<float>> m_data;
     // create a recorder
     RecorderNode(AudioContext & r, int channelCount = 2);
 

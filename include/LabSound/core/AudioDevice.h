@@ -82,6 +82,7 @@ public:
     virtual ~AudioDeviceRenderCallback() {}
     virtual void render(AudioBus * src, AudioBus * dst, int frames, const SamplingInfo & info) = 0;
     virtual void start() = 0;
+    virtual void startAtAudioBus(AudioBus * src) = 0;
     virtual void stop() = 0;
     virtual bool isRunning() const = 0;
 

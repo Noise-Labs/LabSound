@@ -656,6 +656,16 @@ void AudioContext::startOfflineRendering()
     device_callback->start();
 }
 
+
+
+void AudioContext::startOfflineRenderWithInput(std::shared_ptr<AudioBus> src) {
+    if (!m_isOfflineContext)
+        throw std::runtime_error("context was not constructed for offline rendering");
+
+    m_isInitialized = true;
+    device_callback->startAtAudioBus(src.get());
+}
+
 void AudioContext::suspend()
 {
     device_callback->stop();
